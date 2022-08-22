@@ -31,33 +31,6 @@ double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
-
-{% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
-
-
-<div class="alert alert-danger">
-This is the workshop template. Delete these lines and use it to
-<a href="https://carpentries.github.io/workshop-template/customization/index.html">customize</a>
-your own website. If you are running a self-organized workshop or have not put
-in a workshop request yet, please also fill in
-<a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a>
-to let us know about your workshop and our administrator may contact you if we
-need any extra information.
-If this is a pilot workshop for a new lesson,
-set the `pilot` field to `true` in `_config.yml`.
-For workshops teaching a lesson in The Carpentries Incubator,
-remember to uncomment the `incubator_lesson_site`, `incubator_pre_survey`, and `incubator_post_survey`
-fields in `_config.yml`
-</div>
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
-
-
 {% comment %}
 Check DC curriculum
 {% endcomment %}
@@ -419,17 +392,16 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  To participate in
   {% if site.carpentry == "swc" %}
   Software Carpentry
   {% elsif site.carpentry == "dc" %}
-  Data Carpentry
+  this
   {% elsif site.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+  you will need access to a spreadsheet program such as Microsoft Excel or LibreOffice Calc. You will also need to install or update OpenRefine. Follow directions for your operating system for a <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html#spreadsheet-program" target="_blank">spreadsheet program</a> and <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html#openrefine" target="_blank">OpenRefine</a> at the <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html" target="_blank">workshop setup page</a>. You will also need to <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html#data" target="_blank">download the data</a> and confirm that your preferred browser is up to date. Note that if you already have Microsoft Excel installed on your computer, you will not need to install a different spreadsheet program for this workshop.
 </p>
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
@@ -454,7 +426,6 @@ to include the relevant installation instrucctions.
 {% comment %}
 These are the installation instructions for the tools used
 during the workshop.
-{% endcomment %}
 
 {% if site.carpentry == "swc" %}
 {% include swc/setup.html %}
@@ -467,3 +438,4 @@ Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+{% endcomment %}
